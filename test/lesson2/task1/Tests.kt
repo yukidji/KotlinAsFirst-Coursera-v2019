@@ -32,6 +32,22 @@ class Tests {
     }
 
     @Test
+    @Tag("MyFunction")
+    fun lastNumber() {
+        assertEquals(5, lastNumber(5))
+        assertEquals(9, lastNumber(9))
+        assertEquals(0, lastNumber(10))
+        assertEquals(1, lastNumber(11))
+        assertEquals(2, lastNumber(32))
+        assertEquals(0, lastNumber(50))
+        assertEquals(9, lastNumber(99))
+        assertEquals(0, lastNumber(100))
+        assertEquals(1, lastNumber(101))
+        assertEquals(2, lastNumber(132))
+        assertEquals(8, lastNumber(148))
+    }
+
+    @Test
     @Tag("Easy")
     fun ageDescription() {
         assertEquals("1 год", ageDescription(1))
